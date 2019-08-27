@@ -7,18 +7,17 @@ using System.Web;
 
 namespace ProjetoLocacaoGaragem.Models
 {
-    public class Periodo
+    public class Periodo :UserControls
     {
         [Key]
 
-       public int Id { get; set; }
-       public int Codigo { get; set; }
-
-        [ForeignKey("TipoFK")]
-       public TipoVeiculo TipoVeiculo { get; set; }
-       public int TipoFK { get; set; }
-       public DateTime DatInicial { get; set; }
-       public DateTime DataFinal { get; set; }
+        public int Id { get; set; }
+        public int Codigo { get; set; }
+        public decimal Valor { get; set; }
+        public int QtdVagas { get; set; }
+        public DateTime DatInicial { get; set; }
+        public DateTime DataFinal { get; set; }
+        public virtual TipoVeiculo TipoVeiculo { get; set; }
 
     }
 }

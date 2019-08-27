@@ -6,10 +6,12 @@ using System.Web;
 
 namespace ProjetoLocacaoGaragem.Models
 {
-    public class CorVeiculo
+    public class CorVeiculo : UserControls
     {
         [Key]
         public int Id { get; set; }
+
+        public int Codigo { get; set; }
         public string DescricaoCor { get; set; }
 
     }
