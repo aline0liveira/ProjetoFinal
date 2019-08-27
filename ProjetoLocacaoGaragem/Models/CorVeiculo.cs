@@ -10,6 +10,8 @@ namespace ProjetoLocacaoGaragem.Models
     {
         [Key]
         public int Id { get; set; }
+
+        public int CodigoCor { get; set; }
         public string DescricaoCor { get; set; }
 
     }

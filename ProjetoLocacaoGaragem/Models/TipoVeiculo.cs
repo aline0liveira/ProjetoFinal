@@ -23,10 +23,5 @@ namespace ProjetoLocacaoGaragem.Models
         public int MarcasAutFK { get; set; }
 
 
-        public DateTime DatInicial { get; set; }
-
-        public DateTime DataFinal { get; set; }
-
-
     }
 }
