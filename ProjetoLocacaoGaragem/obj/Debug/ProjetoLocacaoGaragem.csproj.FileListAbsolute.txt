@@ -83,8 +83,6 @@ C:\Users\hbsis\Source\Repos\ProjetoFinal\ProjetoLocacaoGaragem\obj\Debug\Projeto
 C:\Users\hbsis\Source\Repos\ProjetoFinal\ProjetoLocacaoGaragem\obj\Debug\ProjetoLocacaoGaragem.csproj.CopyComplete
 C:\Users\hbsis\Source\Repos\ProjetoFinal\ProjetoLocacaoGaragem\obj\Debug\ProjetoLocacaoGaragem.dll
 C:\Users\hbsis\Source\Repos\ProjetoFinal\ProjetoLocacaoGaragem\obj\Debug\ProjetoLocacaoGaragem.pdb
-C:\Users\hbsis\Source\Repos\ProjetoFinal\ProjetoLocacaoGaragem\obj\Debug\ProjetoLocacaoGaragem.Migrations.insere.resources
-C:\Users\hbsis\Source\Repos\ProjetoFinal\ProjetoLocacaoGaragem\obj\Debug\ProjetoLocacaoGaragem.csproj.GenerateResource.cache
 C:\Users\Aliine\Source\Repos\aline0liveira\ProjetoFinal\ProjetoLocacaoGaragem\bin\ProjetoLocacaoGaragem.dll.config
 C:\Users\Aliine\Source\Repos\aline0liveira\ProjetoFinal\ProjetoLocacaoGaragem\bin\ProjetoLocacaoGaragem.dll
 C:\Users\Aliine\Source\Repos\aline0liveira\ProjetoFinal\ProjetoLocacaoGaragem\bin\ProjetoLocacaoGaragem.pdb
@@ -172,3 +170,6 @@ C:\Users\Aliine\Source\Repos\aline0liveira\ProjetoFinal\ProjetoLocacaoGaragem\ob
 C:\Users\Aliine\Source\Repos\aline0liveira\ProjetoFinal\ProjetoLocacaoGaragem\obj\Debug\ProjetoLocacaoGaragem.pdb
 C:\Users\Aliine\Source\Repos\aline0liveira\ProjetoFinal\ProjetoLocacaoGaragem\obj\Debug\ProjetoLocacaoGaragem.Migrations.InsereDados.resources
 C:\Users\Aliine\Source\Repos\aline0liveira\ProjetoFinal\ProjetoLocacaoGaragem\obj\Debug\ProjetoLocacaoGaragem.csproj.GenerateResource.cache
+C:\Users\hbsis\Source\Repos\ProjetoFinal\ProjetoLocacaoGaragem\obj\Debug\ProjetoLocacaoGaragem.csprojAssemblyReference.cache
+C:\Users\hbsis\Source\Repos\ProjetoFinal\ProjetoLocacaoGaragem\obj\Debug\ProjetoLocacaoGaragem.Migrations.Insert.resources
+C:\Users\hbsis\Source\Repos\ProjetoFinal\ProjetoLocacaoGaragem\obj\Debug\ProjetoLocacaoGaragem.csproj.GenerateResource.cache

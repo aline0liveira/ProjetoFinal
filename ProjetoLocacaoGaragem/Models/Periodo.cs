@@ -15,7 +15,7 @@ namespace ProjetoLocacaoGaragem.Models
         public int CodigoPeriodo { get; set; }
         public decimal Valor { get; set; }
         public int QtdVagas { get; set; }
-        public DateTime DatInicial { get; set; }
+        public DateTime DatInicial { get; set; } 
         public DateTime DataFinal { get; set; }
         public virtual TipoVeiculo TipoVeiculo { get; set; }
 

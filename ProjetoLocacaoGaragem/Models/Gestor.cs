@@ -9,9 +9,7 @@ namespace ProjetoLocacaoGaragem.Models
     public class Gestor : UserControls
     {
         [Key]
-
         public string Id { get; set; }
-
         public int CodigoGestor { get; set; }
         public  string NomeGestor { get; set; }
 

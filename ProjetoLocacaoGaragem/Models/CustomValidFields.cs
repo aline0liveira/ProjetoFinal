@@ -10,6 +10,8 @@ namespace ProjetoLocacaoGaragem.Models
 {
     public class CustomValidFields : ValidationAttribute
     {
+        ContextDB dB = new ContextDB();
+
         private ValidFields typeField;
         public CustomValidFields(ValidFields type)
         {
@@ -29,8 +31,6 @@ namespace ProjetoLocacaoGaragem.Models
 
                     case ValidFields.ValidaNomeUsuario: return ValidarNome(value, validationContext.DisplayName);
 
-                    //case ValidFields.ValidaNome: return ValidarNome(value, validationContext.DisplayName);
-
                     default:
                         break;
                 }
@@ -40,7 +40,7 @@ namespace ProjetoLocacaoGaragem.Models
 
         private ValidationResult ValidarEmail(object value, string displayFields)
         {
-            bool result = Regex.IsMatch(value.ToString(), @"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$");
+            bool result = Regex.IsMatch(value.ToString(), @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
 
             if (result)
                 return ValidationResult.Success;
@@ -58,12 +58,21 @@ namespace ProjetoLocacaoGaragem.Models
 
         private ValidationResult ValidarPlaca(object value, string displayFields)
         {
-            bool result = Regex.IsMatch(value.ToString(), "^(([a-zA-Z ]|[é])*)$");
 
+            bool result = Regex.IsMatch(value.ToString(), @"^[a-zA-Z]{3}[0-9]{4}$") || //PlacaBR
+                     Regex.IsMatch(value.ToString(), @"^[a-zA-Z]{3}[0-9]{1}[a-zA-Z]{1}[0-9]{2}$") || //Mercosul
+                     Regex.IsMatch(value.ToString(), @"^[a-zA-Z]{3}[0-9]{2}[a-zA-Z]{1}[0-9]{1}$"); //Moto
             if (result)
-                return ValidationResult.Success;
-            return new ValidationResult($"O campo {displayFields} é inválido!");
+            { 
+                Locacao locacao = dB.Locacaos.FirstOrDefault(x => x.Placa == value.ToString());
+                if (locacao == null)
+                    return ValidationResult.Success;
+                else
+                    
+         
+                return new ValidationResult($"Este campo {displayFields} já está cadastrado na nossa base de dados!");
+            }
+            return new ValidationResult($"A {displayFields} não está no formato aceitável!");
         }
-
     }
 }

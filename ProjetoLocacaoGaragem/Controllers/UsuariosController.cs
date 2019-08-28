@@ -25,7 +25,7 @@ namespace ProjetoLocacaoGaragem.Controllers
 
         // GET: api/Usuarios/5
         [ResponseType(typeof(Usuario))]
-        public async Task<IHttpActionResult> GetUsuario(string id)
+        public async Task<IHttpActionResult> GetUsuario(int id)
         {
             Usuario usuario = await db.Usuarios.FindAsync(id);
             if (usuario == null)
@@ -38,7 +38,7 @@ namespace ProjetoLocacaoGaragem.Controllers
 
         // PUT: api/Usuarios/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutUsuario(string id, Usuario usuario)
+        public async Task<IHttpActionResult> PutUsuario(int id, Usuario usuario)
         {
             if (!ModelState.IsValid)
             {
@@ -81,29 +81,14 @@ namespace ProjetoLocacaoGaragem.Controllers
             }
 
             db.Usuarios.Add(usuario);
-
-            try
-            {
-                await db.SaveChangesAsync();
-            }
-            catch (DbUpdateException)
-            {
-                if (UsuarioExists(usuario.Id))
-                {
-                    return Conflict();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            await db.SaveChangesAsync();
 
             return CreatedAtRoute("DefaultApi", new { id = usuario.Id }, usuario);
         }
 
         // DELETE: api/Usuarios/5
         [ResponseType(typeof(Usuario))]
-        public async Task<IHttpActionResult> DeleteUsuario(string id)
+        public async Task<IHttpActionResult> DeleteUsuario(int id)
         {
             Usuario usuario = await db.Usuarios.FindAsync(id);
             if (usuario == null)
@@ -126,7 +111,7 @@ namespace ProjetoLocacaoGaragem.Controllers
             base.Dispose(disposing);
         }
 
-        private bool UsuarioExists(string id)
+        private bool UsuarioExists(int id)
         {
             return db.Usuarios.Count(e => e.Id == id) > 0;
         }

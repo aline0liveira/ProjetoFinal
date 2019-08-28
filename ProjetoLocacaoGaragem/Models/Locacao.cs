@@ -12,6 +12,8 @@ namespace ProjetoLocacaoGaragem.Models
      [Key]
 
         public int Id { get; set; }
+
+        [CustomValidFields(Enums.ValidFields.ValidaPlaca)]
         public string Placa { get; set; }
         public string Status { get; set; }
         public virtual TipoVeiculo TipoVeiculo { get; set; }

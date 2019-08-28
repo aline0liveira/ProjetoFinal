@@ -9,24 +9,25 @@ namespace ProjetoLocacaoGaragem.Models
     public class Usuario : UserControls
     {
         [Key]
-
-        public string Id { get; set; }
+        public int Id { get; set; }
 
         public int CodigoUsuario { get; set; }
 
+        [CustomValidFields(Enums.ValidFields.ValidaNomeUsuario)]
         public string NomeUsuario { get; set; }
 
+        [CustomValidFields(Enums.ValidFields.ValidaEmail)]
         public string Email { get; set; }
 
-        public bool PCD { get; set; } 
+        public bool PCD { get; set; } = false;
 
-        public bool TrabalhoNoturno { get; set; } 
+        public bool TrabalhoNoturno { get; set; } = false;
 
-        public bool Idoso { get; set; }
+        public bool Idoso { get; set; } = false;
 
-        public bool Carona { get; set; }
+        public bool Carona { get; set; } = false;
 
-        public bool OutroMunicipio { get; set; }
+        public bool OutroMunicipio { get; set; } = false;
 
     }
 }
