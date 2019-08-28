@@ -12,7 +12,7 @@ namespace ProjetoLocacaoGaragem.Models
         [Key]
 
         public int Id { get; set; }
-        public int Codigo { get; set; }
+        public int CodigoPeriodo { get; set; }
         public decimal Valor { get; set; }
         public int QtdVagas { get; set; }
         public DateTime DatInicial { get; set; }

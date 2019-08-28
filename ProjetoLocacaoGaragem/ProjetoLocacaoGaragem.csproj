@@ -176,9 +176,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201908271943417_insere.cs" />
-    <Compile Include="Migrations\201908271943417_insere.Designer.cs">
-      <DependentUpon>201908271943417_insere.cs</DependentUpon>
+    <Compile Include="Migrations\201908280225155_InsereDados.cs" />
+    <Compile Include="Migrations\201908280225155_InsereDados.Designer.cs">
+      <DependentUpon>201908280225155_InsereDados.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ContextDB.cs" />
@@ -279,8 +279,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201908271943417_insere.resx">
-      <DependentUpon>201908271943417_insere.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201908280225155_InsereDados.resx">
+      <DependentUpon>201908280225155_InsereDados.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -12,7 +12,7 @@ namespace ProjetoLocacaoGaragem.Models
 
         public string Id { get; set; }
 
-        public int Codigo { get; set; }
+        public int CodigoUsuario { get; set; }
 
         public string NomeUsuario { get; set; }
 
