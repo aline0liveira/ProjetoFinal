@@ -80,6 +80,8 @@ namespace ProjetoLocacaoGaragem.Controllers
                 return BadRequest(ModelState);
             }
 
+
+
             db.Locacaos.Add(locacao);
             await db.SaveChangesAsync();
 

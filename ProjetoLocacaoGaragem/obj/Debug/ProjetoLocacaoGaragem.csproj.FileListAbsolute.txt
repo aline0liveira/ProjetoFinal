@@ -170,6 +170,6 @@ C:\Users\Aliine\Source\Repos\aline0liveira\ProjetoFinal\ProjetoLocacaoGaragem\ob
 C:\Users\Aliine\Source\Repos\aline0liveira\ProjetoFinal\ProjetoLocacaoGaragem\obj\Debug\ProjetoLocacaoGaragem.pdb
 C:\Users\Aliine\Source\Repos\aline0liveira\ProjetoFinal\ProjetoLocacaoGaragem\obj\Debug\ProjetoLocacaoGaragem.Migrations.InsereDados.resources
 C:\Users\Aliine\Source\Repos\aline0liveira\ProjetoFinal\ProjetoLocacaoGaragem\obj\Debug\ProjetoLocacaoGaragem.csproj.GenerateResource.cache
-C:\Users\hbsis\Source\Repos\ProjetoFinal\ProjetoLocacaoGaragem\obj\Debug\ProjetoLocacaoGaragem.csprojAssemblyReference.cache
-C:\Users\hbsis\Source\Repos\ProjetoFinal\ProjetoLocacaoGaragem\obj\Debug\ProjetoLocacaoGaragem.Migrations.Insert.resources
-C:\Users\hbsis\Source\Repos\ProjetoFinal\ProjetoLocacaoGaragem\obj\Debug\ProjetoLocacaoGaragem.csproj.GenerateResource.cache
+C:\Users\hbsis\source\repos\ProjetoFinal\ProjetoLocacaoGaragem\obj\Debug\ProjetoLocacaoGaragem.csprojAssemblyReference.cache
+C:\Users\hbsis\source\repos\ProjetoFinal\ProjetoLocacaoGaragem\obj\Debug\ProjetoLocacaoGaragem.Migrations.Inser.resources
+C:\Users\hbsis\source\repos\ProjetoFinal\ProjetoLocacaoGaragem\obj\Debug\ProjetoLocacaoGaragem.csproj.GenerateResource.cache

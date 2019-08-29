@@ -13,11 +13,14 @@ namespace ProjetoLocacaoGaragem.Models
         ContextDB dB = new ContextDB();
 
         private ValidFields typeField;
+
         public CustomValidFields(ValidFields type)
         {
             typeField = type;
 
         }
+
+
 
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
@@ -31,12 +34,18 @@ namespace ProjetoLocacaoGaragem.Models
 
                     case ValidFields.ValidaNomeUsuario: return ValidarNome(value, validationContext.DisplayName);
 
+                    case ValidFields.ValidaStatus: return ValidarStatus(value, validationContext);
+
                     default:
                         break;
                 }
+
             }
+
+
             return new ValidationResult($"O campo {validationContext.DisplayName} é obrigatório.");
         }
+
 
         private ValidationResult ValidarEmail(object value, string displayFields)
         {
@@ -59,20 +68,31 @@ namespace ProjetoLocacaoGaragem.Models
         private ValidationResult ValidarPlaca(object value, string displayFields)
         {
 
-            bool result = Regex.IsMatch(value.ToString(), @"^[a-zA-Z]{3}[0-9]{4}$") || //PlacaBR
+            bool result = Regex.IsMatch(value.ToString(), @"^[a-zA-Z]{3}[-][0-9]{4}$") || //PlacaBR
                      Regex.IsMatch(value.ToString(), @"^[a-zA-Z]{3}[0-9]{1}[a-zA-Z]{1}[0-9]{2}$") || //Mercosul
                      Regex.IsMatch(value.ToString(), @"^[a-zA-Z]{3}[0-9]{2}[a-zA-Z]{1}[0-9]{1}$"); //Moto
             if (result)
-            { 
+            {
                 Locacao locacao = dB.Locacaos.FirstOrDefault(x => x.Placa == value.ToString());
                 if (locacao == null)
                     return ValidationResult.Success;
                 else
-                    
-         
-                return new ValidationResult($"Este campo {displayFields} já está cadastrado na nossa base de dados!");
+
+
+                    return new ValidationResult($"Este campo {displayFields} já está cadastrado na nossa base de dados!");
             }
             return new ValidationResult($"A {displayFields} não está no formato aceitável!");
+        }
+
+        private ValidationResult ValidarStatus(object value, ValidationContext validationContext)
+        {
+            Locacao locacao = (Locacao)validationContext.ObjectInstance;
+            if (locacao.AceitaTermo)
+            {
+                locacao.Status = (int)ValidaStatus.FilaDeEspera;
+                return ValidationResult.Success;
+            }
+            return new ValidationResult($"O campo {validationContext.DisplayName} é inválido!");
         }
     }
 }

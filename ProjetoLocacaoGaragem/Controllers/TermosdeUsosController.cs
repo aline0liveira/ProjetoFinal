@@ -51,7 +51,7 @@ namespace ProjetoLocacaoGaragem.Controllers
             }
 
             db.Entry(termosdeUso).State = EntityState.Modified;
-
+     
             try
             {
                 await db.SaveChangesAsync();
@@ -79,6 +79,10 @@ namespace ProjetoLocacaoGaragem.Controllers
             {
                 return BadRequest(ModelState);
             }
+
+            var termo = db.TermosdeUsos.FirstOrDefault(x => x.Vigente == true);  // Essa parte quando for mudar vai Inativar o termo de uso anterior
+            if (termo != null)
+                termo.Vigente = false;
 
             db.TermosdeUsos.Add(termosdeUso);
             await db.SaveChangesAsync();
