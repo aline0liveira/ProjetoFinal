@@ -8,14 +8,24 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using ProjetoLocacaoGaragem.Models;
 
 namespace ProjetoLocacaoGaragem.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class PeriodosController : ApiController
     {
         private ContextDB db = new ContextDB();
+
+
+        [Route("Api/Periodo/{tipoVeiculo}/contendo")]
+        [HttpGet]
+        public IQueryable<Periodo> ObtemContendo(int tipoVeiculo)
+        {
+            return db.Periodos.Where(x => x.TipoVeiculo.Id==tipoVeiculo);
+        }
 
         // GET: api/Periodos
         public IQueryable<Periodo> GetPeriodos()

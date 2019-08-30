@@ -8,11 +8,13 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using ProjetoLocacaoGaragem.Models;
 
 namespace ProjetoLocacaoGaragem.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class UsuariosController : ApiController
     {
         private ContextDB db = new ContextDB();

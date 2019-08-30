@@ -20,8 +20,6 @@ namespace ProjetoLocacaoGaragem.Models
 
         }
 
-
-
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
             if (value != null)
@@ -67,6 +65,7 @@ namespace ProjetoLocacaoGaragem.Models
 
         private ValidationResult ValidarPlaca(object value, string displayFields)
         {
+
 
             bool result = Regex.IsMatch(value.ToString(), @"^[a-zA-Z]{3}[-][0-9]{4}$") || //PlacaBR
                      Regex.IsMatch(value.ToString(), @"^[a-zA-Z]{3}[0-9]{1}[a-zA-Z]{1}[0-9]{2}$") || //Mercosul

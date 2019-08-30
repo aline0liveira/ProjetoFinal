@@ -8,7 +8,6 @@ namespace ProjetoLocacaoGaragem.Models
 {
     public class CustomDataFormat : IsoDateTimeConverter
     {
-
         public CustomDataFormat()
         {
             base.DateTimeFormat = "dd/MM/yyyy HH:mm:ss";

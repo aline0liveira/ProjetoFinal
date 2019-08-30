@@ -55,11 +55,17 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.Cors.5.2.7\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Cors.5.2.7\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
@@ -177,9 +183,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201908300339393_InsertAndUpdate.cs" />
-    <Compile Include="Migrations\201908300339393_InsertAndUpdate.Designer.cs">
-      <DependentUpon>201908300339393_InsertAndUpdate.cs</DependentUpon>
+    <Compile Include="Migrations\201908301738012_Update.cs" />
+    <Compile Include="Migrations\201908301738012_Update.Designer.cs">
+      <DependentUpon>201908301738012_Update.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ContextDB.cs" />
@@ -191,9 +197,6 @@
     <Compile Include="Models\Marca.cs" />
     <Compile Include="Models\Modelo.cs" />
     <Compile Include="Models\Periodo.cs" />
-    <Compile Include="Models\RotaMarcaTipo.cs" />
-    <Compile Include="Models\RotaModeloMarca.cs" />
-    <Compile Include="Models\RotaPeriodoTipo.cs" />
     <Compile Include="Models\TermosdeUso.cs" />
     <Compile Include="Models\TipoVeiculo.cs" />
     <Compile Include="Models\UserControls.cs" />
@@ -284,8 +287,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201908300339393_InsertAndUpdate.resx">
-      <DependentUpon>201908300339393_InsertAndUpdate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201908301738012_Update.resx">
+      <DependentUpon>201908301738012_Update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

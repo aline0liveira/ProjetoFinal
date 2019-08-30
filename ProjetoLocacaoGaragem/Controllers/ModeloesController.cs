@@ -8,14 +8,25 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using ProjetoLocacaoGaragem.Models;
 
 namespace ProjetoLocacaoGaragem.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ModeloesController : ApiController
     {
         private ContextDB db = new ContextDB();
+
+
+        [Route("Api/Modelo/{marca}/contendo")]
+        [HttpGet]
+        public IQueryable<Modelo> ObtemContendo(int marca)
+        {
+            return db.Modelos.Where(x => x.Marca.Id == marca);
+        }
+
 
         // GET: api/Modeloes
         public IQueryable<Modelo> GetModelos()
