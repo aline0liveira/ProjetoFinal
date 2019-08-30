@@ -21,13 +21,7 @@ namespace ProjetoLocacaoGaragem
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-               GlobalConfiguration.Configuration.Formatters.JsonFormatter.SerializerSettings =
-           new JsonSerializerSettings
-           {
-               DateFormatHandling = DateFormatHandling.IsoDateFormat,
-               DateTimeZoneHandling = DateTimeZoneHandling.Unspecified, // PARTE DA DATA 
-               Culture = CultureInfo.GetCultureInfo("pt-BR")
-           };
+         
         }
          
         
